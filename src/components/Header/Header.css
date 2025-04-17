@@ -19,10 +19,26 @@
   align-items: center;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.logo img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
 .logo h1 {
   font-size: 1.3rem;
   color: #333;
   margin: 0;
+  line-height: 1;
 }
 
 .nav ul {

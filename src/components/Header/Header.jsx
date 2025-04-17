@@ -16,7 +16,7 @@ const Header = ({ activeSection }) => {
     <header className="header">
       <div className="header-content">
         <div className="logo">
-          <h1>BuildRight Construction</h1>
+          <img src="/NexWaveLogo.png" alt="NexWave Construction Logo" />
         </div>
         
         <button 

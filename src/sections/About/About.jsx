@@ -5,32 +5,32 @@ const About = () => {
     <div className="about">
       <div className="about-content">
         <div className="about-text">
-          <h2>About BuildRight Construction</h2>
-          <p className="subtitle">Building Excellence Since 2000</p>
+          <h2>About NexWave Construction</h2>
+          <p className="subtitle">Your Trusted General Contractor</p>
           
           <div className="about-description">
             <p>
-              BuildRight Construction has been a leading name in the construction industry for over two decades. 
-              We specialize in delivering high-quality construction services for both commercial and residential projects.
+              NexWave Construction is a trusted general contractor specializing in construction, renovations, and complete home services. 
+              We deliver expert craftsmanship, attention to detail, and quality results for every project.
             </p>
             <p>
-              Our commitment to excellence, attention to detail, and dedication to client satisfaction has earned us 
-              a reputation as one of the most trusted construction companies in the region.
+              Our team is dedicated to transforming your space with modern solutions and professional service. 
+              From exterior renovations to complete home transformations, we bring your vision to life.
             </p>
           </div>
 
           <div className="stats">
             <div className="stat">
-              <h3>20+</h3>
-              <p>Years Experience</p>
-            </div>
-            <div className="stat">
-              <h3>500+</h3>
-              <p>Projects Completed</p>
-            </div>
-            <div className="stat">
               <h3>100%</h3>
-              <p>Client Satisfaction</p>
+              <p>Quality Results</p>
+            </div>
+            <div className="stat">
+              <h3>24/7</h3>
+              <p>Customer Service</p>
+            </div>
+            <div className="stat">
+              <h3>405</h3>
+              <p>Area Code</p>
             </div>
           </div>
         </div>

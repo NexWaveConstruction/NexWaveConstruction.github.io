@@ -40,11 +40,10 @@ const Contact = () => {
 
           <div className="contact-details">
             <div className="contact-item">
-              <div className="icon">📍</div>
+              <div className="icon">👤</div>
               <div>
-                <h3>Address</h3>
-                <p>123 Construction Ave</p>
-                <p>Building District, ST 12345</p>
+                <h3>Contact Person</h3>
+                <p>Marcos Garcia</p>
               </div>
             </div>
 
@@ -52,8 +51,7 @@ const Contact = () => {
               <div className="icon">📞</div>
               <div>
                 <h3>Phone</h3>
-                <p>+1 (555) 123-4567</p>
-                <p>+1 (555) 765-4321</p>
+                <p>405.882.3587</p>
               </div>
             </div>
 
@@ -61,8 +59,7 @@ const Contact = () => {
               <div className="icon">✉️</div>
               <div>
                 <h3>Email</h3>
-                <p>info@buildright.com</p>
-                <p>support@buildright.com</p>
+                <p>mgarcia@nexwaveconstruction.com</p>
               </div>
             </div>
           </div>
@@ -82,7 +79,6 @@ const Contact = () => {
                 required
               />
             </div>
-
             <div className="form-group">
               <label htmlFor="email">Email</label>
               <input
@@ -94,7 +90,6 @@ const Contact = () => {
                 required
               />
             </div>
-
             <div className="form-group">
               <label htmlFor="phone">Phone</label>
               <input
@@ -103,9 +98,9 @@ const Contact = () => {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
+                required
               />
             </div>
-
             <div className="form-group">
               <label htmlFor="message">Message</label>
               <textarea
@@ -114,13 +109,9 @@ const Contact = () => {
                 value={formData.message}
                 onChange={handleChange}
                 required
-                rows="5"
               ></textarea>
             </div>
-
-            <button type="submit" className="submit-btn">
-              Send Message
-            </button>
+            <button type="submit" className="submit-btn">Send Message</button>
           </form>
         </div>
       </div>

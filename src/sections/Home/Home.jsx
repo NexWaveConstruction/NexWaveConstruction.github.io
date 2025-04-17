@@ -6,13 +6,13 @@ const Home = () => {
       <div className="hero">
         <div className="content-wrapper">
           <div className="hero-content">
-            <h1>Building Dreams Into Reality</h1>
-            <p>Quality construction services with over 20 years of excellence</p>
+            <h1>NexWave Construction</h1>
+            <p>Trusted general contractor specializing in construction, renovations, and complete home services</p>
             <button 
               className="cta-button"
               onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
             >
-              Get a Free Quote
+              Call Us: 405-882-3587
             </button>
           </div>
         </div>
@@ -23,18 +23,18 @@ const Home = () => {
           <div className="features-grid">
             <div className="feature">
               <div className="feature-icon">🏗️</div>
-              <h3>Expert Construction</h3>
-              <p>Professional construction services for commercial and residential projects</p>
+              <h3>Construction</h3>
+              <p>Expert craftsmanship and quality results for all your construction needs</p>
             </div>
             <div className="feature">
-              <div className="feature-icon">📋</div>
-              <h3>Project Management</h3>
-              <p>Efficient project management ensuring timely delivery and quality results</p>
+              <div className="feature-icon">🔨</div>
+              <h3>Renovations</h3>
+              <p>Transform your space with our attention to detail and modern solutions</p>
             </div>
             <div className="feature">
-              <div className="feature-icon">💪</div>
-              <h3>Experienced Team</h3>
-              <p>Skilled professionals with years of industry experience</p>
+              <div className="feature-icon">🏠</div>
+              <h3>Home Services</h3>
+              <p>Complete home services to maintain and enhance your property</p>
             </div>
           </div>
         </div>
