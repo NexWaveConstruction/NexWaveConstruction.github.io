@@ -59,7 +59,7 @@ const Contact = () => {
           <div className="contact-details">
             <div className="contact-item">
               <div className="icon">👤</div>
-              <div>
+              <div className="contact-text">
                 <h3>Contact Person</h3>
                 <p>Marcos Garcia</p>
               </div>
@@ -67,7 +67,7 @@ const Contact = () => {
 
             <div className="contact-item">
               <div className="icon">📞</div>
-              <div>
+              <div className="contact-text">
                 <h3>Phone</h3>
                 <p>405.882.3587</p>
               </div>
@@ -75,7 +75,7 @@ const Contact = () => {
 
             <div className="contact-item">
               <div className="icon">✉️</div>
-              <div>
+              <div className="contact-text">
                 <h3>Email</h3>
                 <p>mgarcia@nexwaveconstruction.com</p>
               </div>

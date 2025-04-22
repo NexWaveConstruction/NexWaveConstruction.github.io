@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section">
-          <h3>BuildRight Construction</h3>
+          <h3>NexWave Construction</h3>
           <p>Building excellence, delivering quality, and creating lasting impressions.</p>
           <div className="social-links">
             <a href="#" aria-label="Facebook">
@@ -46,9 +46,8 @@ const Footer = () => {
         <div className="footer-section">
           <h4>Contact Info</h4>
           <ul className="contact-info">
-            <li>📍 123 Construction Ave</li>
-            <li>📞 +1 (555) 123-4567</li>
-            <li>✉️ info@buildright.com</li>
+            <li><span>📞</span> +1 (405) 882-3587</li>
+            <li><span>✉️</span> mgarcia@nexwaveconstruction.com</li>
           </ul>
         </div>
       </div>

@@ -30,13 +30,41 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  align-items: center;
 }
 
 .contact-item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 1rem;
   text-align: left;
+  width: 100%;
+  max-width: 400px;
+}
+
+.contact-text {
+  flex: 1;
+  min-width: 0;
+  max-width: calc(100% - 4.5rem); /* Account for icon width and gap */
+  text-align: center;
+}
+
+.contact-item h3 {
+  color: #333;
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.contact-item p {
+  color: #666;
+  line-height: 1.6;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  max-width: 100%;
+  text-align: center;
 }
 
 .icon {
@@ -49,16 +77,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.contact-item h3 {
-  color: #333;
-  margin-bottom: 0.5rem;
-}
-
-.contact-item p {
-  color: #666;
-  line-height: 1.6;
 }
 
 .contact-form {
@@ -132,12 +150,17 @@
   }
 
   .contact-item {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    text-align: center;
+    text-align: left;
+    width: 100%;
+  }
+
+  .contact-text {
+    max-width: calc(100% - 4.5rem);
   }
 
   .icon {
-    margin-bottom: 1rem;
+    margin-bottom: 0;
   }
 } 

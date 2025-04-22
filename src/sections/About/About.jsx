@@ -40,24 +40,10 @@ const About = () => {
           <div className="team-members">
             <div className="team-member">
               <div className="member-image">
-                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="John Smith" />
+                <img src="/team/marcos.jpg" alt="Marcos Garcia" />
               </div>
-              <h4>John Smith</h4>
+              <h4>Marcos Garcia</h4>
               <p>CEO & Founder</p>
-            </div>
-            <div className="team-member">
-              <div className="member-image">
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Sarah Johnson" />
-              </div>
-              <h4>Sarah Johnson</h4>
-              <p>Project Manager</p>
-            </div>
-            <div className="team-member">
-              <div className="member-image">
-                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Michael Brown" />
-              </div>
-              <h4>Michael Brown</h4>
-              <p>Lead Architect</p>
             </div>
           </div>
         </div>

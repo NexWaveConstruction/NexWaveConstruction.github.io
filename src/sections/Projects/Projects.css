@@ -1,6 +1,6 @@
 /* Main projects section container */
-.projects {
-  padding: 3rem 0;
+.projects-section {
+  padding: 4rem 0;
   background-color: #f8f9fa;
 }
 
@@ -8,15 +8,16 @@
 .projects-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 2rem;
   text-align: center;
 }
 
 /* Section title styling */
-.projects h2 {
+.projects-content h2 {
   font-size: 2.5rem;
   color: #333;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
+  text-align: center;
 }
 
 /* Subtitle text styling */
@@ -127,12 +128,12 @@
 /* Responsive styles for mobile devices */
 @media (max-width: 768px) {
   /* Adjust section padding for mobile */
-  .projects {
+  .projects-section {
     padding: 2rem 0;
   }
 
   /* Reduce title size for mobile */
-  .projects h2 {
+  .projects-content h2 {
     font-size: 1.8rem;
   }
 

@@ -74,11 +74,27 @@
   color: #fff;
 }
 
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .contact-info li {
   color: #ccc;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.contact-info li span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-bottom {
