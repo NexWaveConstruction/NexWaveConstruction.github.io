@@ -14,13 +14,18 @@
   --max-width: 1200px;
 }
 
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--white);
-  overflow-x: hidden;
 }
 
 .app {
@@ -28,17 +33,20 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
+  overflow-x: hidden;
 }
 
 main {
   flex: 1;
   width: 100%;
+  overflow-x: hidden;
 }
 
 section {
   min-height: 100vh;
   scroll-margin-top: 70px;
   width: 100%;
+  overflow-x: hidden;
 }
 
 .content-wrapper {
