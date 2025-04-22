@@ -128,23 +128,43 @@
 @media (max-width: 768px) {
   /* Adjust section padding for mobile */
   .projects {
-    padding: 3rem 0;
+    padding: 2rem 0;
   }
 
   /* Reduce title size for mobile */
   .projects h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
-  /* Adjust slide height for mobile */
+  /* Adjust content padding for mobile */
+  .projects-content {
+    padding: 0 0.5rem;
+  }
+
+  /* Adjust slideshow container for mobile */
+  .project-slideshow {
+    max-width: 100%;
+  }
+
+  /* Adjust slide container for mobile */
   .project-slide {
-    height: 400px;
+    aspect-ratio: 4/3;
   }
 
   /* Adjust navigation button size for mobile */
   .nav-button {
-    width: 35px;
-    height: 35px;
-    font-size: 1.2rem;
+    width: 4px;
+  }
+
+  .nav-button:hover {
+    width: 6px;
+  }
+
+  /* Adjust counter position for mobile */
+  .slide-counter {
+    bottom: 5px;
+    right: 5px;
+    padding: 2px 4px;
+    font-size: 0.7rem;
   }
 } 
