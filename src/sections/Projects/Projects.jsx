@@ -1,95 +1,179 @@
 import { useState } from 'react'
 import './Projects.css'
 
+// Projects component - Displays a slideshow of project images
 const Projects = () => {
-  const [activeFilter, setActiveFilter] = useState('all')
+  // State to track the current image index
+  const [currentIndex, setCurrentIndex] = useState(0)
 
+  // Array of project images with their paths
   const projects = [
     {
       id: 1,
-      title: 'Modern Office Complex',
-      category: 'commercial',
-      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
-      description: 'A state-of-the-art office complex with sustainable features'
+      image: '/projects/3212_Venice_(Fireplace_Restoration)/UTF-8IMG_5641.JPG'
     },
     {
       id: 2,
-      title: 'Luxury Residential Tower',
-      category: 'residential',
-      image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
-      description: 'High-end residential tower with premium amenities'
+      image: '/projects/3212_Venice_(Fireplace_Restoration)/UTF-8IMG_5642.JPG'
     },
     {
       id: 3,
-      title: 'Shopping Mall Renovation',
-      category: 'commercial',
-      image: 'https://images.unsplash.com/photo-1519567241046-7f570eee3ce6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
-      description: 'Complete renovation of a major shopping center'
+      image: '/projects/Guthrie_(New_Construction)/Image_1.jpg'
     },
     {
       id: 4,
-      title: 'Family Home Development',
-      category: 'residential',
-      image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
-      description: 'Modern family homes with sustainable features'
+      image: '/projects/Guthrie_(New_Construction)/Image_2.jpg'
     },
     {
       id: 5,
-      title: 'Industrial Warehouse',
-      category: 'industrial',
-      image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
-      description: 'Large-scale industrial warehouse facility'
+      image: '/projects/Guthrie_(New_Construction)/Image_3.jpg'
     },
     {
       id: 6,
-      title: 'Mixed-Use Development',
-      category: 'commercial',
-      image: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
-      description: 'Integrated commercial and residential space'
+      image: '/projects/Guthrie_(New_Construction)/Image_4.jpg'
+    },
+    {
+      id: 7,
+      image: '/projects/Guthrie_(New_Construction)/Image_5.jpg'
+    },
+    {
+      id: 8,
+      image: '/projects/Guthrie_(New_Construction)/Image_6.jpg'
+    },
+    {
+      id: 9,
+      image: '/projects/Guthrie_(New_Construction)/Image_7.jpg'
+    },
+    {
+      id: 10,
+      image: '/projects/Guthrie_(New_Construction)/Image_8.jpg'
+    },
+    {
+      id: 11,
+      image: '/projects/OKC_1208_SW_40th/Image_6.jpg'
+    },
+    {
+      id: 12,
+      image: '/projects/OKC_1208_SW_40th/Image_7.jpg'
+    },
+    {
+      id: 13,
+      image: '/projects/OKC_1208_SW_40th/Image_8.jpg'
+    },
+    {
+      id: 14,
+      image: '/projects/OKC_1208_SW_40th/Image_9.jpg'
+    },
+    {
+      id: 15,
+      image: '/projects/OKC_1208_SW_40th/Image_10.jpg'
+    },
+    {
+      id: 16,
+      image: '/projects/OKC_1208_SW_40th/Image_11.jpg'
+    },
+    {
+      id: 17,
+      image: '/projects/OKC_1208_SW_40th/Image_12.jpg'
+    },
+    {
+      id: 18,
+      image: '/projects/OKC_1208_SW_40th/Image_13.jpg'
+    },
+    {
+      id: 19,
+      image: '/projects/OKC_1208_SW_40th/Image_14.jpg'
+    },
+    {
+      id: 20,
+      image: '/projects/OKC_1208_SW_40th/Image_15.jpg'
+    },
+    {
+      id: 21,
+      image: '/projects/OKC_1613_NW_22nd/Image_1.jpg'
+    },
+    {
+      id: 22,
+      image: '/projects/OKC_1613_NW_22nd/Image_2.jpg'
+    },
+    {
+      id: 23,
+      image: '/projects/OKC_1613_NW_22nd/Image_3.jpg'
+    },
+    {
+      id: 24,
+      image: '/projects/OKC_1613_NW_22nd/Image_4.jpg'
+    },
+    {
+      id: 25,
+      image: '/projects/OKC_1613_NW_22nd/Image_5.jpg'
+    },
+    {
+      id: 26,
+      image: '/projects/OKC_1613_NW_22nd/Image_6.jpg'
+    },
+    {
+      id: 27,
+      image: '/projects/OKC_1613_NW_22nd/Image_7.jpg'
+    },
+    {
+      id: 28,
+      image: '/projects/OKC_1613_NW_22nd/Image_8.jpg'
+    },
+    {
+      id: 29,
+      image: '/projects/OKC_1613_NW_22nd/Image_9.jpg'
+    },
+    {
+      id: 30,
+      image: '/projects/OKC_1613_NW_22nd/Image_10.jpg'
     }
   ]
 
-  const filters = [
-    { id: 'all', label: 'All Projects' },
-    { id: 'commercial', label: 'Commercial' },
-    { id: 'residential', label: 'Residential' },
-    { id: 'industrial', label: 'Industrial' }
-  ]
+  // Handler for previous button - cycles to the last image if at the beginning
+  const handlePrevious = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === 0 ? projects.length - 1 : prevIndex - 1
+    )
+  }
 
-  const filteredProjects = activeFilter === 'all' 
-    ? projects 
-    : projects.filter(project => project.category === activeFilter)
+  // Handler for next button - cycles to the first image if at the end
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === projects.length - 1 ? 0 : prevIndex + 1
+    )
+  }
+
+  // Get the current project based on the index
+  const currentProject = projects[currentIndex]
 
   return (
+    // Main projects section container
     <div className="projects">
       <div className="projects-content">
+        {/* Section header */}
         <h2>Our Projects</h2>
         <p className="subtitle">Discover our portfolio of successful construction projects</p>
 
-        <div className="filters">
-          {filters.map(filter => (
-            <button
-              key={filter.id}
-              className={`filter-btn ${activeFilter === filter.id ? 'active' : ''}`}
-              onClick={() => setActiveFilter(filter.id)}
-            >
-              {filter.label}
-            </button>
-          ))}
-        </div>
+        {/* Slideshow container */}
+        <div className="project-slideshow">
+          {/* Current slide */}
+          <div className="project-slide">
+            <img src={currentProject.image} alt="Project" />
+          </div>
+          
+          {/* Navigation buttons */}
+          <button className="nav-button prev" onClick={handlePrevious}>
+            ‹
+          </button>
+          <button className="nav-button next" onClick={handleNext}>
+            ›
+          </button>
 
-        <div className="projects-grid">
-          {filteredProjects.map(project => (
-            <div key={project.id} className="project-card">
-              <div className="project-image">
-                <img src={project.image} alt={project.title} />
-              </div>
-              <div className="project-info">
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-              </div>
-            </div>
-          ))}
+          {/* Slide counter */}
+          <div className="slide-counter">
+            {currentIndex + 1} / {projects.length}
+          </div>
         </div>
       </div>
     </div>

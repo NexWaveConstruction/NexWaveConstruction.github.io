@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Modal from '../../components/Modal/Modal'
 import './Contact.css'
 
 const Contact = () => {
@@ -8,6 +9,7 @@ const Contact = () => {
     phone: '',
     message: ''
   })
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -17,18 +19,34 @@ const Contact = () => {
     }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Here you would typically handle the form submission
-    console.log('Form submitted:', formData)
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      message: ''
-    })
-    alert('Thank you for your message! We will get back to you soon.')
+    
+    try {
+      const response = await fetch('https://formsubmit.co/mgarcia@nexwaveconstruction.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
+
+      if (response.ok) {
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          message: ''
+        })
+        setIsModalOpen(true)
+      } else {
+        throw new Error('Form submission failed')
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      alert('There was an error submitting the form. Please try again.')
+    }
   }
 
   return (
@@ -68,6 +86,10 @@ const Contact = () => {
         <div className="contact-form">
           <h3>Send us a Message</h3>
           <form onSubmit={handleSubmit}>
+            <input type="hidden" name="_subject" value="New Contact Form Submission" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_next" value={window.location.href} />
+            
             <div className="form-group">
               <label htmlFor="name">Name</label>
               <input
@@ -115,6 +137,12 @@ const Contact = () => {
           </form>
         </div>
       </div>
+
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <h2>Thank You!</h2>
+        <p>Your message has been sent successfully. We will get back to you soon.</p>
+        <button onClick={() => setIsModalOpen(false)}>Close</button>
+      </Modal>
     </div>
   )
 }

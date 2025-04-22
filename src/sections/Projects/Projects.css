@@ -1,125 +1,150 @@
+/* Main projects section container */
 .projects {
-  padding: 6rem 2rem;
+  padding: 3rem 0;
   background-color: #f8f9fa;
 }
 
+/* Content wrapper for centering and max-width */
 .projects-content {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
 }
 
+/* Section title styling */
 .projects h2 {
-  text-align: center;
   font-size: 2.5rem;
   color: #333;
   margin-bottom: 1rem;
 }
 
-.subtitle {
-  text-align: center;
+/* Subtitle text styling */
+.projects .subtitle {
+  font-size: 1.2rem;
   color: #666;
   margin-bottom: 3rem;
 }
 
-.filters {
+/* Slideshow container with overflow control */
+.project-slideshow {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: visible;
+  margin-bottom: 2rem;
+}
+
+/* Individual slide container */
+.project-slide {
+  width: 100%;
+  aspect-ratio: 16/9;
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 1rem;
-  margin-bottom: 3rem;
-  flex-wrap: wrap;
+  position: relative;
+  background-color: #f8f9fa;
 }
 
-.filter-btn {
-  padding: 0.5rem 1.5rem;
-  border: 2px solid #007bff;
-  background: none;
-  color: #007bff;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 1rem;
-}
-
-.filter-btn:hover {
-  background-color: #007bff;
-  color: white;
-}
-
-.filter-btn.active {
-  background-color: #007bff;
-  color: white;
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.project-card {
-  background-color: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-}
-
-.project-image {
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-}
-
-.project-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.project-card:hover .project-image img {
-  transform: scale(1.1);
+/* Image styling within slides */
+.project-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
 
 .project-info {
-  padding: 1.5rem;
+  padding: 2rem;
+  text-align: center;
 }
 
 .project-info h3 {
+  font-size: 1.5rem;
   color: #333;
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 .project-info p {
   color: #666;
   line-height: 1.6;
-  font-size: 0.9rem;
 }
 
+/* Navigation button base styles */
+.nav-button {
+  position: absolute;
+  top: 10%;
+  height: 75%;
+  width: 5px;
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+/* Navigation button hover effect */
+.nav-button:hover {
+  background: rgba(255, 255, 255, 0.9);
+  width: 8px;
+}
+
+/* Previous button positioning */
+.nav-button.prev {
+  left: -10px;
+}
+
+/* Next button positioning */
+.nav-button.next {
+  right: -10px;
+}
+
+/* Slide counter styling */
+.slide-counter {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  font-family: monospace;
+}
+
+/* Remove old indicator styles */
+.slide-indicators,
+.indicator {
+  display: none;
+}
+
+/* Responsive styles for mobile devices */
 @media (max-width: 768px) {
+  /* Adjust section padding for mobile */
   .projects {
-    padding: 4rem 1rem;
+    padding: 3rem 0;
   }
 
+  /* Reduce title size for mobile */
   .projects h2 {
     font-size: 2rem;
   }
 
-  .filters {
-    gap: 0.5rem;
+  /* Adjust slide height for mobile */
+  .project-slide {
+    height: 400px;
   }
 
-  .filter-btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
+  /* Adjust navigation button size for mobile */
+  .nav-button {
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
   }
 } 
