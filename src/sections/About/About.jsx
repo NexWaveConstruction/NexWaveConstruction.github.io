@@ -44,6 +44,14 @@ const About = () => {
               </div>
               <h4>Marcos Garcia</h4>
               <p>CEO & Founder</p>
+              <div className="member-description">
+                <p>
+                  Marcos graduated from the University of Oklahoma with a Bachelor's Degree in Construction Science. Growing up around residential construction, he developed a passion for building early on.
+                  After spending 5 years in commercial construction, managing large-scale projects and honing his technical skills, Marcos returned to his roots and founded NexWave Construction.
+                  Marcos brings a well-rounded perspective to every project and is committed to delivering high-quality work the truly relflects his client's visions. 
+                  At the heart of it all, Marcos is driven by one goal: helping people turn into reality, one project at a time.               
+                </p>
+              </div>
             </div>
           </div>
         </div>
